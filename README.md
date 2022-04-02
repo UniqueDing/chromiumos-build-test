@@ -156,7 +156,7 @@ ssh connect
 
 `./mount_gpt_image.sh -f chromiumos_qemu_image_5.bin`
 
-`sed 's/uniquedingmain/192.168.2.177/g -i /etc/lsb-release`
+`sed "s/uniquedingmain/192.168.2.177/g" -i /etc/lsb-release`
 
 /etc/lsb-release
 ``` text
@@ -197,7 +197,8 @@ Then grenerate update payload to payload.bin
 
 ![](pic/cros_generate_update_payload.png)
 
-> I write an appid to the payload.bin.json
+> I write an appid to the payload.bin.json  
+
 Copy payload to devserver `static_dir`
 
 `cp payload.bin.json payload.bin.log payload.bin /path/to/docker/static_dir/amd64-generic/payload/`
